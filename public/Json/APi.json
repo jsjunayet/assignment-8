@@ -1,0 +1,45 @@
+[
+    {
+      "id": 1,
+      "name": "Workshops and Webinars",
+      "image": "https://i.ibb.co/fkHnXxx/webnar.jpg",
+      "price": 1200,
+      "description": "Unlock your potential with our dynamic Workshops and Webinars Services. Join expert-led sessions that empower your professional growth and personal development. Gain valuable knowledge and skills in a convenient and engaging format.workshops and webinars have their place in the world of education and professional development. The choice between them depends on the learning objectives, audience size, and the nature of the content being delivered. Workshops are more suitable for interactive, skill-focused learning, while webinars are ideal for disseminating information and reaching a broader audience. In some cases, a combination of both formats may be used to achieve specific educational goals."
+    },
+    {
+      "id": 2,
+      "name": "Educational Conferences",
+      "image": "https://i.ibb.co/VBMhSTB/seminar.jpg",
+      "price": 1500,
+      "description": "Educational conferences provide networking and learning opportunities, facilitating knowledge exchange among professionals. Attendees gain insights from experts and stay current in their field, while also presenting their work for recognition and growth. These events are essential for career development and staying informed.educational conferences serve as valuable services for educational life by offering opportunities for learning, networking, research dissemination, and professional growth. They play a crucial role in advancing the field of education and supporting the development of educators and researchers, ultimately benefiting students and the broader education community."
+    },
+    {
+      "id": 3,
+      "name": "Career Fairs",
+      "image": "https://i.ibb.co/41gsFWn/fair.jpg",
+      "price": 2200,
+      "description": "Career fairs are essential events connecting job seekers with potential employers. They offer job opportunities, networking, and a chance to learn about various industries. Attendees can submit resumes, engage in interviews, and explore career paths, making career fairs valuable for job seekers and employers alike.Career fairs provide valuable services to both job seekers and employers. Job seekers gain access to a wide range of job opportunities, networking opportunities, and resources to enhance their job search. Employers benefit from recruitment opportunities, brand promotion, and information sharing. These events serve as essential platforms for connecting talent with job openings and advancing careers."
+    },
+    {
+      "id": 4,
+      "name": "Support and Assistance",
+      "image": "https://i.ibb.co/XpjbbYg/support.jpg",
+      "price": 3000,
+      "description": "Adequate customer support and assistance channels are important for users who may have questions, technical issues, or need guidance during their learning journey.Support and assistance services in education provide essential resources and guidance to help students, educators, and institutions succeed. These services encompass tutoring, counseling, financial aid, career guidance, research support, technology assistance, and more, ensuring a supportive learning environment for all"
+    },
+    {
+      "id": 5,
+      "name": "Resource Libraries",
+      "image": "https://i.ibb.co/6NGjjxw/source.jpg",
+      "price": 1800,
+      "description": "These services may provide access to a library of educational resources, including textbooks, articles, videos, and supplementary materials to support learning.resource libraries in education serve as knowledge hubs, offering a wide range of materials, research support, and services to support teaching, learning, and research. They play a pivotal role in enhancing the quality of education and advancing academic pursuits."
+    },
+    {
+      "id": 6,
+      "name": "Certification and Credential",
+      "image": "https://i.ibb.co/4NW2g4Y/certificate.jpg",
+      "price": 1200,
+      "description": "Many Educational and Training Events services offer certifications or credentials upon successful completion of courses. These certifications can be valuable for career advancement and skill recognition. certification and credential services in education are vital for verifying qualifications, ensuring professional standards, and facilitating career advancement. They are relevant to a wide range of fields and professions, from healthcare and education to information technology and engineering. These services contribute to building trust, competence, and expertise within various industries."
+    }
+  ]
+  
