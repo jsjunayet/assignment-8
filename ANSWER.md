@@ -20,7 +20,7 @@ console.log(greetign);
 
 #### C: `undefined` ?
 
-<i>beacuase Here there is no value in the object so it looks undefined</i>
+<i>beacuase Here there is no value in the object so it looks undefined.</i>
 
 </p>
 </details>
@@ -45,7 +45,7 @@ sum(1, "2");
 
 #### C: `"12"` ?
 
-<i> Here a number type cannot add another string so string to the argument of the sum call</i>
+<i> Here a number type cannot add another string so string to the argument of the sum call.</i>
 
 </p>
 </details>
@@ -71,7 +71,7 @@ console.log(food);
 
 #### A: `['🍕', '🍫', '🥑', '🍔']`?
 
-<i>Do not add anything to info.favoriteFood here</i>
+<i>Do not add anything to info.favoriteFood here.</i>
 
 </p>
 </details>
@@ -96,7 +96,7 @@ console.log(sayHi());
 
 #### B: `Hi there, undefined` ?
 
-<i>Hi there, undefined because Here the function is not getting parameters so Hi there then undefined</i>
+<i>Hi there, undefined because Here the function is not getting parameters so Hi there then undefined.</i>
 
 </p>
 </details>
@@ -124,7 +124,7 @@ console.log(count);
 
 #### C: 3 ?
 
-<i>Write your explanation here</i>
+<i>becuase values like 1, 2, and 3 are truthy, while 0 is falsy.</i>
 
 </p>
 </details>

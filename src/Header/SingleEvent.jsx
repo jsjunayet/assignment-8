@@ -18,7 +18,7 @@ const SingleEvent = () => {
                 <div className="hero-content text-center text-neutral-content">
                     <div className="">
                         <h1 className="mb-5 text-5xl font-bold pt-20">{event.name}</h1>
-                        <p className="px-20 mb-5">{event.description}</p>
+                        <p className="px-5 lg:px-20 mb-5">{event.description}</p>
                         <button className="btn btn-primary">Get Started</button>
                     </div>
                 </div>

@@ -23,7 +23,7 @@ const About = () => {
                 <div className='mt-5'>
                     <p className='text-3xl font-semibold'>Our Global Community</p>
                     <p className='pt-4 pb-6 text-[#7E7C87]'>Join thousand of instructors and earn money hassle free!</p>
-                    <div className='flex justify-evenly'>
+                    <div className='grid grid-cols-2 lg:grid-cols-4 gap-5 lg:gap-10'>
                         <div className='flex gap-5'>
                             <img src="f3.png" alt="" />
                             <div>

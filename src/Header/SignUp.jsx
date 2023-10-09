@@ -70,7 +70,7 @@ const SignUp = () => {
                 <h4 className="block text-white font-sans text-5xl font-semibold leading-snug tracking-normal text-blue-gray-900 antialiased">
                     Registration
                 </h4>
-                <p className="mt-1 px-40  text-white font-sans text-base font-normal leading-relaxed  antialiased">
+                <p className="mt-1 px-10 lg:px-40  text-white font-sans text-base font-normal leading-relaxed  antialiased">
                     User registration is a crucial step for accessing personalized services and <br /> maintaining data security on digital platforms
                 </p>
                 <form onSubmit={handleform} className="mt-8 py-5 px-10 mb-2 w-80 bg-green-100  sm:w-96 mx-auto rounded shadow-xl">

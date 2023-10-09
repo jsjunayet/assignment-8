@@ -138,11 +138,11 @@ const Layout = () => {
                                     <div className="dropdown dropdown-end">
                                         <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
                                             <div className="w-10 rounded-full">
-                                                {/* {
-                                                    user.photoURL ? <img src={user.photoURL} />
+                                                {
+                                                    user?.photoURL ? <img src={user.photoURL} />
                                                         : <img src="/avar.png" />
-                                                } */}
-                                                <img src="/avar.png" />
+                                                }
+
                                             </div>
                                         </label>
                                         <ul tabIndex={0} className="mt-3 z-[1] p-2 w-52 shadow menu menu-sm bg-base-100  dropdown-content  rounded-box ">
@@ -157,11 +157,11 @@ const Layout = () => {
                                                 {/* <a className="justify-between text-black font-semibold">Name</a> */}
                                             </li>
                                             <li>
-                                                {/* {
-                                                    user.email ? <a className="text-black font-semibold">emial : {user.email}</a>
+                                                {
+                                                    user?.email ? <a className="text-black font-semibold">emial : {user.email}</a>
                                                         : <a className="text-black font-semibold">emial</a>
-                                                } */}
-                                                <a className="text-black font-semibold">emial</a>
+                                                }
+
                                             </li>
                                         </ul>
                                     </div>

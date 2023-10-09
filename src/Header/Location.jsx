@@ -5,8 +5,8 @@ import { BiLocationPlus, BiPhoneCall, BiSolidInstitution } from 'react-icons/bi'
 const Location = () => {
     return (
         <div>
-            <p className="text-5xl text-center font-bold mt-5">Institute Location</p>
-            <div className="flex gap-10 justify-around items-center">
+            <p className="text-5xl text-center font-bold mt-5 mb-5 lg:mb-0">Institute Location</p>
+            <div className="lg:flex gap-10 justify-around items-center">
                 <div className="px-10">
                     <div className="flex gap-1 items-center ">
                         <BiSolidInstitution className="text-5xl"></BiSolidInstitution>
