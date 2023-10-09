@@ -147,14 +147,14 @@ const Layout = () => {
                                         </label>
                                         <ul tabIndex={0} className="mt-3 z-[1] p-2 w-52 shadow menu menu-sm bg-base-100  dropdown-content  rounded-box ">
                                             <li>
-                                                {/* {
-                                                    user.displayName ? <a className="justify-between text-black font-semibold">
+                                                {
+                                                    user?.displayName ? <a className="justify-between text-black font-semibold">
                                                         Name : {user.displayName}
                                                     </a> : <a className="justify-between text-black font-semibold">
                                                         Name :
                                                     </a>
-                                                } */}
-                                                <a className="justify-between text-black font-semibold">Name</a>
+                                                }
+                                                {/* <a className="justify-between text-black font-semibold">Name</a> */}
                                             </li>
                                             <li>
                                                 {/* {
