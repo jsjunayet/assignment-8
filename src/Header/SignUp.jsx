@@ -4,41 +4,68 @@ import { authContext } from "../Auth/AuthControl";
 import { AiFillGoogleCircle, AiFillGithub, AiFillFacebook, AiFillTwitterCircle } from 'react-icons/ai'
 import swal from "sweetalert";
 import Footer from "../Section/Footer/Footer";
+import { updateProfile } from "firebase/auth";
 
 const SignUp = () => {
     const { signup, google } = useContext(authContext)
+
 
     const googlehandle = () => {
         google()
             .then(result => {
                 console.log(result.user)
+                swal("Congress!", "You regsistration succesfull!", "success");
+
             })
             .catch(error => {
                 console.log(error.message)
             })
     }
+
     const handleform = (e) => {
         e.preventDefault();
         const email = e.target.email.value;
         const password = e.target.password.value;
-        if (/^(?![A-Z])(?!.*[\W_]).{1,5}$/.test(password)) {
-            swal("Error!", "Greater than 6 characters!,capital letter & special character", "error")
+        const img = e.target.img.value;
+        const name = e.target.name.value;
+        if (password.length < 6) {
+            swal("Error!", "Greater than 6 characters!", "error")
             return;
         }
+        else if (!/[A-Z]/.test(password)) {
+            swal("Error!", "capital letter plz", "error")
+            return;
+        }
+        else if (!/\W|_/g.test(password)) {
+            swal("Error!", " specail character", "error")
+            return;
+        }
+
         console.log(email)
         console.log(password)
         signup(email, password)
             .then(result => {
-                console.log(result.user)
                 swal("Congress!", "You regsistration succesfull!", "success");
+                updateProfile(result.user, {
+                    displayName: name, photoURL: img
+                })
+                    .then(() => {
+                        console.log("yes")
+                    })
+                    .catch(() => {
+                        console.log("no")
+                    })
+
             })
             .catch(error => {
                 console.log(error.message)
                 swal("Error!", `${error.message}`, "error");
             })
+
     }
+
     return (
-        <div style={{ backgroundImage: 'url(/login.jpg)' }} className="text-center  h-full lg:h-[600px]">
+        <div style={{ backgroundImage: 'url(/login.jpg)' }} className="text-center  h-full lg:h-[700px]">
             <div className="relative flex flex-col rounded-xl bg-transparent bg-clip-border text-gray-700 shadow-none">
                 <h4 className="block text-white font-sans text-5xl font-semibold leading-snug tracking-normal text-blue-gray-900 antialiased">
                     Registration
@@ -50,12 +77,21 @@ const SignUp = () => {
                     <div className="mb-4 flex flex-col gap-6">
 
                         <div className="relative h-11 w-full min-w-[200px]">
-                            <input name="name" required
+                            <input name="name"
                                 className="peer h-full w-full rounded-md border border-blue-gray-200 border-t-transparent bg-transparent px-3 py-3 font-sans text-sm font-normal text-blue-gray-700 outline outline-0 transition-all placeholder-shown:border placeholder-shown:border-blue-gray-200 placeholder-shown:border-t-blue-gray-200 focus:border-2 focus:border-pink-500 focus:border-t-transparent focus:outline-0 disabled:border-0 disabled:bg-blue-gray-50"
-                                placeHolder=" "
+                                placeHolder=""
                             />
                             <label className="before:content[' '] after:content[' '] pointer-events-none absolute left-0 -top-1.5 flex h-full w-full select-none text-[11px] font-normal leading-tight text-blue-gray-400 transition-all before:pointer-events-none before:mt-[6.5px] before:mr-1 before:box-border before:block before:h-1.5 before:w-2.5 before:rounded-tl-md before:border-t before:border-l before:border-blue-gray-200 before:transition-all after:pointer-events-none after:mt-[6.5px] after:ml-1 after:box-border after:block after:h-1.5 after:w-2.5 after:flex-grow after:rounded-tr-md after:border-t after:border-r after:border-blue-gray-200 after:transition-all peer-placeholder-shown:text-sm peer-placeholder-shown:leading-[4.1] peer-placeholder-shown:text-blue-gray-500 peer-placeholder-shown:before:border-transparent peer-placeholder-shown:after:border-transparent peer-focus:text-[11px] peer-focus:leading-tight peer-focus:text-pink-500 peer-focus:before:border-t-2 peer-focus:before:border-l-2 peer-focus:before:!border-pink-500 peer-focus:after:border-t-2 peer-focus:after:border-r-2 peer-focus:after:!border-pink-500 peer-disabled:text-transparent peer-disabled:before:border-transparent peer-disabled:after:border-transparent peer-disabled:peer-placeholder-shown:text-blue-gray-500">
                                 Name
+                            </label>
+                        </div>
+                        <div className="relative h-11 w-full min-w-[200px]">
+                            <input name="img"
+                                className="peer h-full w-full rounded-md border border-blue-gray-200 border-t-transparent bg-transparent px-3 py-3 font-sans text-sm font-normal text-blue-gray-700 outline outline-0 transition-all placeholder-shown:border placeholder-shown:border-blue-gray-200 placeholder-shown:border-t-blue-gray-200 focus:border-2 focus:border-pink-500 focus:border-t-transparent focus:outline-0 disabled:border-0 disabled:bg-blue-gray-50"
+                                placeHolder=""
+                            />
+                            <label className="before:content[' '] after:content[' '] pointer-events-none absolute left-0 -top-1.5 flex h-full w-full select-none text-[11px] font-normal leading-tight text-blue-gray-400 transition-all before:pointer-events-none before:mt-[6.5px] before:mr-1 before:box-border before:block before:h-1.5 before:w-2.5 before:rounded-tl-md before:border-t before:border-l before:border-blue-gray-200 before:transition-all after:pointer-events-none after:mt-[6.5px] after:ml-1 after:box-border after:block after:h-1.5 after:w-2.5 after:flex-grow after:rounded-tr-md after:border-t after:border-r after:border-blue-gray-200 after:transition-all peer-placeholder-shown:text-sm peer-placeholder-shown:leading-[4.1] peer-placeholder-shown:text-blue-gray-500 peer-placeholder-shown:before:border-transparent peer-placeholder-shown:after:border-transparent peer-focus:text-[11px] peer-focus:leading-tight peer-focus:text-pink-500 peer-focus:before:border-t-2 peer-focus:before:border-l-2 peer-focus:before:!border-pink-500 peer-focus:after:border-t-2 peer-focus:after:border-r-2 peer-focus:after:!border-pink-500 peer-disabled:text-transparent peer-disabled:before:border-transparent peer-disabled:after:border-transparent peer-disabled:peer-placeholder-shown:text-blue-gray-500">
+                                img URL
                             </label>
                         </div>
                         <div className="relative h-11 w-full min-w-[200px]">

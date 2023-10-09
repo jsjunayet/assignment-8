@@ -1,6 +1,7 @@
-import { GoogleAuthProvider, createUserWithEmailAndPassword, onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup, signOut } from "firebase/auth";
+import { GoogleAuthProvider, createUserWithEmailAndPassword, onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup, signOut, } from "firebase/auth";
 import { createContext, useEffect, useState } from "react";
 import auth from "../firebase/firebase.config";
+import { FaTruck } from "react-icons/fa6";
 
 export const authContext = createContext(null)
 const AuthControl = ({ children }) => {
@@ -32,13 +33,14 @@ const AuthControl = ({ children }) => {
         setloading(true)
         return signInWithPopup(auth, provider)
     }
+
     const info = {
         user,
         signup,
         login,
         logout,
         google,
-        loading
+        loading,
 
     }
     return (

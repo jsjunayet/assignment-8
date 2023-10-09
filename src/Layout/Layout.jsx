@@ -1,4 +1,4 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { Link, NavLink, Outlet } from "react-router-dom";
 import { authContext } from "../Auth/AuthControl";
 import swal from "sweetalert";
@@ -7,6 +7,8 @@ import swal from "sweetalert";
 
 const Layout = () => {
     const { user, logout } = useContext(authContext);
+
+
     const logouthandle = () => {
         logout()
             .then(result => {
@@ -125,20 +127,58 @@ const Layout = () => {
                         </ul>
                     </div>
                     <div className="navbar-end flex gap-5 items-center ">
-                        <div className="avatar">
+                        {/* <div className="avatar">
                             <div className="w-10 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
                                 <img src="/p.jpg" />
                             </div>
+                        </div> */}
+                        <div className="">
+                            <div className="navbar ">
+                                <div className="flex-none gap-2 justify-center">
+                                    <div className="dropdown dropdown-end">
+                                        <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
+                                            <div className="w-10 rounded-full">
+                                                {/* {
+                                                    user.photoURL ? <img src={user.photoURL} />
+                                                        : <img src="/avar.png" />
+                                                } */}
+                                                <img src="/avar.png" />
+                                            </div>
+                                        </label>
+                                        <ul tabIndex={0} className="mt-3 z-[1] p-2 w-52 shadow menu menu-sm bg-base-100  dropdown-content  rounded-box ">
+                                            <li>
+                                                {/* {
+                                                    user.displayName ? <a className="justify-between text-black font-semibold">
+                                                        Name : {user.displayName}
+                                                    </a> : <a className="justify-between text-black font-semibold">
+                                                        Name :
+                                                    </a>
+                                                } */}
+                                                <a className="justify-between text-black font-semibold">Name</a>
+                                            </li>
+                                            <li>
+                                                {/* {
+                                                    user.email ? <a className="text-black font-semibold">emial : {user.email}</a>
+                                                        : <a className="text-black font-semibold">emial</a>
+                                                } */}
+                                                <a className="text-black font-semibold">emial</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
+
                         {
-                            user ? <Link onClick={logouthandle} className="text-2xl font-bold hover:text-[#0E831E]">LogOut</Link>
-                                : <Link to={'/login'} className="text-2xl font-bold hover:text-[#0E831E]">Login</Link>
+                            user ? <Link onClick={logouthandle} className="btn btn-secondary">LogOut</Link>
+                                : <Link to={'/login'} className="btn btn-success">Login</Link>
 
 
                         }
                     </div>
                 </div>
             </div>
+
             <div className="">
                 <Outlet></Outlet>
             </div>
