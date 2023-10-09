@@ -5,9 +5,10 @@ const Section2 = () => {
     Aos.init({
         duration: 1000
     })
+    Aos.refresh()
     return (
         <div className="bg-slate-50 text-center pb-3">
-            <p className='text-5xl font-bold py-5'>Our Teachers!</p>
+            <p className='text-4xl font-bold py-5'>Our Teachers!</p>
             <p className='px-20 text-xl pb-5'>Our teacher is essential for enhancing the learning experience. It helps teachers understand what's working well and where improvements are needed in their teaching methods, materials, and classroom management. Constructive feedback delivered respectfully and with clarity can be a valuable tool for professional growth.</p>
             <div className='flex  justify-evenly'>
                 <div className="w-full lg:w-[24%]">

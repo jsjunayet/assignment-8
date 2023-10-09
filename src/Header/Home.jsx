@@ -36,7 +36,7 @@ const Home = () => {
                 <Section2></Section2>
             </div>
             <div className="mt-10">
-                <p className="text-5xl text-center font-bold pb-5">Our Best Services</p>
+                <p className="text-4xl text-center font-bold my-10 pb-5">Our Best Services</p>
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-5">
                     {
                         events.map(event => <Event key={event.id} event={event}></Event>)

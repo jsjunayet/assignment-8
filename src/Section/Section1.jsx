@@ -6,6 +6,7 @@ const Section1 = () => {
     Aos.init({
         duration: 2000
     })
+    Aos.refresh()
     return (
         <div>
             <div className="hero">

@@ -9,11 +9,13 @@ import SingleEvent from "../Header/SingleEvent";
 import Private from "../PVt/Private";
 import Location from "../Header/Location";
 import Private1 from "../PVt/Private1";
+import Error from "./Error";
 
 const router = createBrowserRouter([
     {
         path: '/',
         element: <Layout></Layout>,
+        errorElement: <Error></Error>,
         children: [
             {
                 path: '/',
